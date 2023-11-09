@@ -1,0 +1,228 @@
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+/*Schuab - Header(Início)*/
+  header {
+    background: #2c3e50;
+    width: 100%;
+  }
+
+  .nav_bar {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+    position: relative;
+    box-shadow: 0px 3px 10px black;
+  }
+  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .nav_list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .nav_item {
+    margin-right: 20px;
+    margin-top: 9px;
+  }
+
+  .h1 {
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* Adiciona efeito de troca de cor ao passar o mouse */
+  .h1:hover {
+    color: rgb(188, 54, 45);
+    transition: all 0.3s ease; 
+  }
+
+  .nav_link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .nav_link:hover {
+    color: rgb(188, 54, 45);
+    transition: all 0.3s ease; 
+  }
+
+  ul .nav_item ul.dropdown li {
+    display: block;
+    margin-top: 3px;
+    padding: 5px;
+  }
+  
+  ul .nav_item ul.dropdown {
+    width: 230px;
+    background: #2c3e50;
+    box-shadow: 0px 3px 10px black;
+    position: absolute;
+    z-index: 999;
+    /* O dropdown começa com display: none */
+    display: none;
+  }
+  
+  ul li:hover ul.dropdown {
+    /* E ao passar o mouse o display muda para block permitindo a visualização */
+    display: block;
+  }
+/* Como dito no html com o display none o menu mobile ficará escondido */
+/*Schuab - Header(Fim)*/
+/*Schuab - Hero Section(Início)*/
+  .main_content {
+    background-color: rgb(162, 162, 162);
+  }
+
+  .map_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70rem;
+    /* overflow: hidden permite que apenas uma imagem fique a mostra ao invez de todas juntas */
+    overflow: hidden;
+  }
+  
+  .map_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* opacity será responsável por trocar a imagem e será chamado pelo JS */
+    transition: opacity 0.5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .zoomIn {
+    position: absolute;
+    top: 4rem;
+    left: 10rem;
+    z-index: 1000;
+    padding: 1rem 1rem;
+    background-color: white;
+    cursor: zoom-in;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+
+  .zoomIn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .zoomOut {
+    position: absolute;
+    top: 8rem;
+    left: 10rem;
+    z-index: 1000;
+    padding: 1rem 1rem;
+    background-color: rgb(255, 255, 255);
+    cursor: zoom-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+
+  .zoomOut:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+/*Schuab - Hero Section(Fim)*/
+/*Schuab - Responsividade(Início)*/
+/*Schuab - Responsividade(Fim)*/
+
+/*Santiago - Footer(Início)*/
+  .footer_area {
+    background: #c2c6ca;
+  }
+
+
+  .footer_top {
+    padding: 10px 0px 170px;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 10px 3px 10px black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    text-align: center;
+  }
+
+  .footer_top .footer_background {
+    position: absolute;
+    bottom: 0;
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_background.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+  }
+
+  .footer_top .footer_background .footer_background_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+  }
+
+  .footer_top .footer_background .footer_background_two {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+  }
+
+  @-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+  }
+
+  @-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+  }
+
+  @keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+  }
+/*Santiago - Footer(Fim)*/

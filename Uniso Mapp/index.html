@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniso Mapp</title>
+  <!-- Santiago - Icone ao lado do titulo do site -->
+  <!--Style-->
+  <link rel="shortcut icon" href="assets/Imagem/logo-svg.svg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--Schuab - Header(Início)-->
+  <header>
+    <nav class="nav_bar">
+      <div class="nav_list">        
+        <ul>
+          <div class="logo nav_item">
+            <a href="index.html" id="logo">
+              <img src="assets/Imagem/logo-svg.svg" alt="logo">
+            </a> 
+          </div>
+          <!-- onclick="changeImage": Ao clicar no menu essa função permite a troca de 
+          imagens através do pathing pelo id, qual é chamado no js. Ex: Clicando no apoio 
+          2, essa função chamará a imagem do apoio 2, conforme o banco de dados no JS-->
+          <li class="nav_item" id="link_biblioteca" onclick="changeImage('link_biblioteca')">
+            <a href="#" class="h1">Biblioteca</a>
+          </li>
+          <li class="nav_item" id="link_saa" onclick="changeImage('link_saa')">
+            <a href="#" class="h1">SAA</a>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="h1">Blocos</a>
+            <!-- classe dropdown é escondida no css e mostrada 
+            apenas ao dar hover em alguma classe "nav_item" -->
+            <ul class="dropdown">
+              <li><a href="#" class="nav_link" id="link_blocoa" 
+                onclick="changeImage('link_blocoA')">Bloco A</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_blocob" 
+                onclick="changeImage('link_blocoB')">Bloco B</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_blococ" 
+                onclick="changeImage('link_blocoC')">Bloco C</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_blocod" 
+                onclick="changeImage('link_blocoD')">Bloco D</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_blocoe" 
+                onclick="changeImage('link_blocoE')">Bloco E</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_blocof" 
+                onclick="changeImage('link_blocoF')">Bloco F</a>
+              </li>
+            </ul>    
+          </li>
+          <li class="nav_item">
+            <a href="#" class="h1">Apoios</a>
+            <ul class="dropdown">
+              <li><a href="#" class="nav_link" id="link_apoio1" 
+                onclick="changeImage('link_apoio1')">Apoios 1</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_apoio2" 
+                onclick="changeImage('link_apoio2')">Apoios 2</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_apoio3" 
+                onclick="changeImage('link_apoio3')">Apoios 3</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_apoio4" 
+                onclick="changeImage('link_apoio4')">Apoios 4</a>
+              </li>
+            </ul>     
+          </li>
+          <li class="nav_item">
+            <a href="#" class="h1">Extras</a>
+            <ul class="dropdown">
+              <li><a href="#" class="nav_link" id="link_quadras"         
+                onclick="changeImage('link_quadras')">Quadras</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_estacionamentos" 
+                onclick="changeImage('link_estacionamentos')">Estacionamentos</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_lapec"           
+                onclick="changeImage('link_lapec')">Lapec</a></li>
+              <li><a href="#" class="nav_link" id="link_casas_apoios"    
+                onclick="changeImage('link_casas_apoios')">Casas de Apoio</a>
+              </li>
+              <li><a href="#" class="nav_link" id="link_veterinária"     
+                onclick="changeImage('link_veterinária')">Veterinária</a>
+              </li>
+            </ul>            
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<!--Schuab - Hero Section(Início)-->
+  <div class="main_content">
+    <div class="map_container">  
+      <img id="main_map" src="assets/Imagem/homepage.svg" alt="Mapa Inicial" class="map">
+      <!-- Os botões zoomIn e zoomOut ao serem clicados acionam as funções de mesmo
+      nome no js, quais poossibilitam as funções de colocar e tirar zoom-->
+      <button class="zoomIn"  id="zoomIn"  
+        onclick="zoomIn ()"><i class="fa-solid fa-plus" ></i>
+      </button>
+      <button class="zoomOut" id="zoomOut" 
+        onclick="zoomOut()"><i class="fa-solid fa-minus"></i>
+      </button>
+    </div>
+  </div>
+<!--Schuab - Hero Section(Fim)-->
+<!--Santiago - Footer(Início)-->
+<footer class="footer_area">
+  <div class="footer_top">
+    <div class="footer_background">
+        <div class="footer_background_one"></div>
+        <div class="footer_background_two"></div>
+    </div>  
+    <div>
+      <div>
+          <div>
+            <p>© Alunos Eng da computação 2º semestre. 2023 All rights reserved.</p>
+          </div>
+          <div>
+            <p>Desenho dos mapas por <a href="https://www.instagram.com/luis.hfa/" 
+              target="_blank">Luis Henrique Fragoso Almeida</a></p>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--Santiago - Footer(Fim)-->
+<!--Schuab - Scripts-->
+<script src="https://kit.fontawesome.com/eddcdea45e.js" 
+  crossorigin="anonymous">
+</script>
+<script src="scripts.js" defer></script>
+</body>
+</html>
